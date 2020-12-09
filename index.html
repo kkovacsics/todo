@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Daily To-Do list manager</h1>
+        <div class="todo">
+            <div class="todo__date"></div>
+            <div class="todo__input">
+                <input type="text" class="todo__text" placeholder="Take the garbage out">
+                <button class="todo__btn">+</button>
+            </div>
+            <div class="todo__lists">
+                <div class="todo__pending">
+                    <h2 class="todo__info">You have 2 pending items</h2>
+                    <div class="todo_list">
+                        <div class="todo__item">
+                            <input type="checkbox">
+                            <span>ezt kell csinálni</span>
+                            <button class="trash">&#10006;</button>
+                        </div>
+                        <div class="todo__item">
+                            <input type="checkbox">
+                            <span>ezt is meg kell csinálni</span>
+                            <button class="trash">&#10006;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo__completed">
+                    <h2 class="todo__info">Completed tasks: 50%</h2>
+                    <div class="todo_list">
+                        <div class="todo__item">
+                            <span class="checked">&#10004;</span>
+                            <span class="text">ez már kész</span>
+                        </div>
+                        <div class="todo__item">
+                            <span class="checked">&#10004;</span>
+                            <span class="text">ez is kész</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo__handler">
+                    <span>Hide Complete</span>
+                    <span>Clear All</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

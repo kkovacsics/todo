@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color:  rgb(243, 243, 243);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    background: linear-gradient(rgb(251, 106,75), rgb(244,93,102));
+    width: 40rem;
+    margin: 0 auto;
+    padding: .5rem;
+}
+.container h1 {
+    text-align: center;
+}
+.todo {
+    width: 30rem;
+    height: 40rem;
+    margin: 0 auto 2rem;
+    background-color: rgb(243, 243, 243);
+    border-radius: .3rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: #888;
+}
+.todo__date {
+    color: rgb(251, 106,75);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+.todo__input {
+    display: flex;
+    justify-content: space-between;
+}
+.todo__text {
+    flex: 1;
+    margin-right: .5rem;
+    font-size: 1rem;
+    height: 3rem;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: .2rem;
+}
+.todo__btn {
+    height: 3rem;
+    width: 4rem;
+    background-color: #ccc;
+    outline: none;
+    border: none;
+    border-radius: .2rem;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: bold;
+    color: rgb(243, 243, 243);
+    cursor: pointer;
+}
+.todo__btn:hover {
+    background-color: rgb(64, 18, 180);
+}
+
+.todo__info {
+    font-size: 1rem;
+}
+.todo__item {
+    position: relative;
+    font-size: 1rem;
+    line-height: 2.4rem;
+    background-color: rgb(233, 229, 241);
+    overflow: hidden;
+}
+.todo__item button {
+    position: absolute;
+    right: -2rem;
+    height: 2rem;
+    width: 2rem;
+    border: none;
+    outline: none;
+    background-color: rgb(251, 106,75);
+    color: rgb(243, 243, 243);
+    border-radius: .2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .3s;
+}
+.todo__item:hover button {
+    right: 0;
+}
+.trash:hover {
+    background-color: rgb(233, 50, 8);
+}
+/*
+.todo__pending .todo__item {
+    display: flex;
+    align-items: center;
+}
+*/
+.todo__completed .todo__item .checked {
+    color: rgb(16, 139, 47);
+    border: 1px solid #888;
+    padding: .4rem;
+}
+.todo__completed .todo__item .text {
+    text-decoration: line-through;
+}
+
+.todo__handler {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #444;
+    margin-top: 1rem;
+}
+.todo__handler span:hover {
+    color: rgb(64, 18, 180);
+    cursor: pointer;
+}
