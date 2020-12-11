@@ -1,9 +1,9 @@
 body {
+    color:  rgb(243, 243, 243);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    color:  rgb(243, 243, 243);
 }
 
 * {
@@ -12,23 +12,23 @@ body {
 
 .container {
     background: linear-gradient(rgb(251, 106,75), rgb(244,93,102));
-    width: 40rem;
     margin: 0 auto;
     padding: .5rem;
+    width: 40rem;
 }
 .container h1 {
     text-align: center;
 }
 .todo {
-    width: 30rem;
-    height: 40rem;
-    margin: 0 auto 2rem;
     background-color: rgb(243, 243, 243);
     border-radius: .3rem;
-    font-size: 1.5rem;
-    padding: 1rem;
     color: #888;
+    font-size: 1.5rem;
+    height: 40rem;
+    margin: 0 auto 2rem;
     overflow: auto;
+    padding: 1rem;
+    width: 30rem;
 }
 .todo__date {
     color: rgb(251, 106,75);
@@ -40,59 +40,72 @@ body {
     justify-content: space-between;
 }
 .todo__text {
-    flex: 1;
-    margin-right: .5rem;
-    font-size: 1rem;
-    height: 3rem;
-    outline: none;
     border: 1px solid #ccc;
     border-radius: .2rem;
+    flex: 1;
+    font-size: 1rem;
+    height: 3rem;
+    margin-right: .5rem;
+    outline: none;
     padding: 0 .5rem;
 }
 .todo__btn {
-    height: 3rem;
-    width: 4rem;
     background-color: #ccc;
-    outline: none;
     border: none;
     border-radius: .2rem;
-    font-size: 2rem;
-    line-height: 2rem;
-    font-weight: bold;
     color: rgb(243, 243, 243);
     cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3rem;
+    line-height: 2rem;
+    outline: none;
+    width: 4rem;
 }
 .todo__btn:hover {
     background-color: rgb(64, 18, 180);
 }
 
 .todo__lists {
+    display: none;
     overflow: auto;
+}
+.todo__pending {
+    margin-bottom: 2rem;
 }
 .todo__info {
     font-size: 1rem;
 }
-.todo__item {
-    position: relative;
-    font-size: 1rem;
-    line-height: 2.4rem;
-    background-color: rgb(233, 229, 241);
+.todo__list {
     overflow: hidden;
+    position: relative;
+}
+.todo__item {
+    background-color: rgb(233, 229, 241);
+    font-size: 1rem;
+    left: 0;
+    line-height: 2.4rem;
     margin: .2rem 0;
+    overflow: hidden;
+    position: relative;
+    transition: left .3s;
+}
+.todo__item--right {
+    left: 30rem;
 }
 .todo__item button {
+    background-color: rgb(251, 106,75);
+    border: none;
+    border-radius: .2rem;
+    color: rgb(243, 243, 243);
+    cursor: pointer;
+    font-weight: bold;
+    height: 2.4rem;
+    outline: none;
     position: absolute;
     right: -2.4rem;
-    height: 2.4rem;
-    width: 2.4rem;
-    border: none;
-    outline: none;
-    background-color: rgb(251, 106,75);
-    color: rgb(243, 243, 243);
-    border-radius: .2rem;
-    font-weight: bold;
-    cursor: pointer;
     transition: all .3s;
+    width: 2.4rem;
 }
 .todo__item:hover button {
     right: 0;
@@ -102,14 +115,12 @@ body {
 }
 .todo__completed {
     display: none;
-}
-.todo__completed.show{
-    display: block;
+    margin-bottom: 2rem;
 }
 
 .todo__completed .todo__item .checked {
-    color: rgb(16, 139, 47);
     border: 1px solid #888;
+    color: rgb(16, 139, 47);
     padding: .4rem;
 }
 .todo__completed .todo__item .text {
@@ -117,14 +128,34 @@ body {
 }
 
 .todo__handler {
+    color: #444;
     display: flex;
-    justify-content: space-evenly;
     font-size: 1rem;
     font-weight: bold;
-    color: #444;
+    justify-content: space-evenly;
     margin-top: 1rem;
 }
 .todo__handler span:hover {
     color: rgb(64, 18, 180);
     cursor: pointer;
+}
+
+.todo__nothing {
+    color: #444;
+    display: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 2rem;
+}
+.todo__nothing p {
+    text-align: center;
+}
+.todo__nothing img {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.show{
+    display: block;
 }
